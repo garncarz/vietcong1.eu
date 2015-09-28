@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Map</th>
+        <th>Mode</th>
+        <th>Players</th>
+        <th>Pwd.</td>
+    </tr>
+    {% for server in server_list %}
+        <tr>
+            <td>{{ server.name }}</td>
+            <td>{{ server.map.name }}</td>
+            <td>{{ server.mode.name }}</td>
+            <td>{{ server.numplayers }}/{{ server.maxplayers }}</td>
+            <td>{{ server.password }}</td>
+        </tr>
+    {% endfor %}
+</table>
