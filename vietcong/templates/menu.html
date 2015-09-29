@@ -1,0 +1,10 @@
+{% load i18n %}
+
+<ul class="right">
+
+    <li class="has-dropdown">
+        <a href="{% url 'game:server_list' %}">{% trans 'Lists' %}</a>
+        <ul class="dropdown">
+            <li><a href="{% url 'game:server_list' %}">{% trans 'Servers' %}</a>
+        </ul>
+</ul>

@@ -1,0 +1,19 @@
+{% load i18n %}
+{% get_current_language as lang %}
+
+<div class="row">
+    <p class="text-center">
+    {% if lang.code == 'cs' %}
+        Toto jsou neoficiální, fanouškovské stránky hry Vietcong.
+    {% else %}
+        This is the unofficial, fan site of game Vietcong.
+    {% endif %}
+    {% trans 'Contact' %}:
+    <a class="email" rel="admin//vietcong1/eu">admin//vietcong1/eu</a><br>
+    {% if lang.code == 'cs' %}
+        Jako alternativní master server je použit
+    {% else %}
+        The alternative master server used is
+    {% endif %}
+    <a href="http://www.qtracker.com">Qtracker</a>.
+</div>

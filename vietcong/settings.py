@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'game',
+    'vietcong',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -102,6 +103,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_URL = 'http://vietcong1.eu/'  # TODO
 
 
 # Crawler settings

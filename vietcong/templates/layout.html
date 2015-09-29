@@ -1,0 +1,59 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vietcong1.eu</title>
+
+    <link rel="stylesheet" href="{% static 'css/jungle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'flags/flags.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+
+    <script src="{% static 'js/scripts.min.js' %}"></script>
+</head>
+
+<body role="document">
+
+<div class="wrapper">
+
+<div class="fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <h1>
+                    <a href="{% url 'game:server_list' %}">Vietcong1.eu</a>
+                    &raquo; {% block title %}{% endblock %}
+                </h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            {% include 'menu.html' %}
+        </section>
+    </nav>
+</div>
+
+<div class="row">
+    <section class="{% block mainSectionClass %}
+                        large-10 large-centered columns
+                    {% endblock%}" role="main">
+        {# TODO messages #}
+
+        {% block content %}{% endblock %}
+    </section>
+</div>
+
+<div class="push"></div>
+</div>
+
+<div class="footer">
+    {% include 'footer.html' %}
+</div>
+
+</body>
+</html>

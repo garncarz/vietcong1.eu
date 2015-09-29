@@ -59,6 +59,8 @@ class Server(models.Model):
             self._merge_players_info(info)
         except:
             logger.exception('Error refreshing server %s' % str(self))
+            self.online = False
+            self.save()
 
     def _fetch_info(self):
         udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -79,7 +81,7 @@ class Server(models.Model):
         self.vietnam = 'vietnam' in info
 
         self.country = geoip.country_code_by_addr(self.ip)
-        self.countryname = geoip.country_name_by_addr(self.ip)
+        self.country_name = geoip.country_name_by_addr(self.ip)
 
         self.name = info['hostname']
 

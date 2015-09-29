@@ -1,5 +1,9 @@
-{% load i18n %}
+{% extends 'layout.html' %}
+{% load staticfiles i18n %}
 
+{% block title %}{{ server.name }}{% endblock %}
+
+{% block content %}
 <div class="row">
     <div class="small-6 columns">
         <dl>
@@ -12,10 +16,10 @@
 
             <dt>{% trans "Country" %}
             <dd>
-                <img src="{# TODO #}"
+                <img src="{% static 'blank.gif' %}"
                     alt="{{ server.country }}"
                     class="flag flag-{{ server.country|lower }}">
-                {% trans server.countryname %}
+                {% trans server.country_name %}
 
             <dt>IP
             <dd>{{ server.ip }}
@@ -67,3 +71,4 @@
         </tr>
     {% endfor %}
 </table>
+{% endblock %}
