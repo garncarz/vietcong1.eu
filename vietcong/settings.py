@@ -102,3 +102,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Crawler settings
+
+UDP_TIMEOUT = 4
+GEOIP_DAT = '/usr/share/GeoIP/GeoIP.dat'
