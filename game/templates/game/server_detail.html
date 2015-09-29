@@ -1,0 +1,69 @@
+{% load i18n %}
+
+<div class="row">
+    <div class="small-6 columns">
+        <dl>
+            <dt>{% trans "Map" %}
+            <dd>
+                <a href="{# TODO #}">
+                    {{ server.map.name }}
+                </a>
+                ({{ server.mode.name }})
+
+            <dt>{% trans "Country" %}
+            <dd>
+                <img src="{# TODO #}"
+                    alt="{{ server.country }}"
+                    class="flag flag-{{ server.country|lower }}">
+                {% trans server.countryname %}
+
+            <dt>IP
+            <dd>{{ server.ip }}
+
+            <dt>Port
+            <dd>{{ server.port }}
+
+            <dt>{% trans "Version of game" %}
+            <dd>{{ server.version }}
+        </dl>
+    </div>
+
+    <div class="small-6 columns">
+        <dl>
+            <dt>{% trans "Maximum players" %}
+            <dd>{{ server.maxplayers }}
+
+            <dt>HradBa
+            <dd>
+                {% if server.hradba %}{{ server.hradba }}
+                {% else %}{% trans "No" %}
+                {% endif %}
+
+            <dt>{% trans "Password" %}
+            <dd>{{ server.password|yesno }}
+
+            <dt>{% trans "Dedicated server" %}
+            <dd>{{ server.dedic|yesno }}
+
+            <dt>{% trans "Vietnam mode" %}
+            <dd>{{ server.vietnam|yesno }}
+        </dl>
+    </div>
+</div>
+
+<table>
+    <tr>
+        <th>{% trans "Name" %}</th>
+        <th>{% trans "Frags" %}</th>
+        <th>{% trans "Ping" %}</th>
+        <th>{% trans "Online for" %}</th>
+    </tr>
+    {% for player in server.players.all %}
+        <tr>
+            <td>{{ player.name }}</td>
+            <td>{{ player.frags }}</td>
+            <td>{{ player.ping }}</td>
+            <td>{{ player.online_since|timesince }}</td>
+        </tr>
+    {% endfor %}
+</table>

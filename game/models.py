@@ -3,6 +3,7 @@ import re
 import socket
 
 from django.conf import settings
+from django.core.urlresolvers import reverse
 from django.db import models
 
 from core import geoip
@@ -47,6 +48,9 @@ class Server(models.Model):
 
     def __str__(self):
         return '%s:%s' % (self.ip, self.infoport)
+
+    def get_absolute_url(self):
+        return reverse('game:server_detail', kwargs={'pk': self.pk})
 
     def refresh(self):
         try:
@@ -121,7 +125,7 @@ class Player(models.Model):
     ping = models.PositiveSmallIntegerField(default=0)
     frags = models.PositiveSmallIntegerField(default=0)
 
-    server = models.ForeignKey(Server)
+    server = models.ForeignKey(Server, related_name='players')
 
     online = models.BooleanField(default=True)
     online_since = models.DateTimeField(auto_now_add=True)

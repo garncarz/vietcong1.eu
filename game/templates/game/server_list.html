@@ -8,7 +8,11 @@
     </tr>
     {% for server in server_list %}
         <tr>
-            <td>{{ server.name }}</td>
+            <td>
+                <a href="{{ server.get_absolute_url }}">
+                    {{ server.name }}
+                </a>
+            </td>
             <td>{{ server.map.name }}</td>
             <td>{{ server.mode.name }}</td>
             <td>{{ server.numplayers }}/{{ server.maxplayers }}</td>
