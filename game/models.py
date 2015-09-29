@@ -1,3 +1,4 @@
+import logging
 import re
 import socket
 
@@ -5,6 +6,10 @@ from django.conf import settings
 from django.db import models
 
 from core import geoip
+
+
+logger = logging.getLogger(__name__)
+
 
 class Mode(models.Model):
     name = models.CharField(max_length=256, unique=True)
@@ -21,8 +26,8 @@ class Server(models.Model):
     port = models.PositiveSmallIntegerField(default=5425)
 
     name = models.CharField(max_length=256)
-    map = models.ForeignKey(Map)
-    mode = models.ForeignKey(Mode)
+    map = models.ForeignKey(Map, null=True, blank=True)
+    mode = models.ForeignKey(Mode, null=True, blank=True)
 
     country = models.CharField(max_length=2, null=True, blank=True)
     country_name = models.CharField(max_length=50, null=True, blank=True)
@@ -40,10 +45,16 @@ class Server(models.Model):
     online_since = models.DateTimeField(auto_now_add=True)
     offline_since = models.DateTimeField(null=True, blank=True)
 
+    def __str__(self):
+        return '%s:%s' % (self.ip, self.infoport)
+
     def refresh(self):
-        info = self._fetch_info()
-        self._merge_info(info)
-        self._merge_players_info(info)
+        try:
+            info = self._fetch_info()
+            self._merge_info(info)
+            self._merge_players_info(info)
+        except:
+            logger.exception('Error refreshing server %s' % str(self))
 
     def _fetch_info(self):
         udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -90,9 +101,9 @@ class Server(models.Model):
         for i in range(int(info['numplayers'])):
             try:
                 name = info['player_' + str(i)]
-                player = Player.objects.get_or_create(server=self,
-                                                      name=name,
-                                                      online=False)
+                player, _ = Player.objects.get_or_create(server=self,
+                                                         name=name,
+                                                         online=False)
                 player.online = True
                 player.ping = int(info['ping_' + str(i)])
                 player.frags = int(info['frags_' + str(i)])
@@ -107,8 +118,8 @@ class Server(models.Model):
 
 class Player(models.Model):
     name = models.CharField(max_length=256)
-    ping = models.PositiveSmallIntegerField()
-    frags = models.PositiveSmallIntegerField()
+    ping = models.PositiveSmallIntegerField(default=0)
+    frags = models.PositiveSmallIntegerField(default=0)
 
     server = models.ForeignKey(Server)
 
