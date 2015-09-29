@@ -16,3 +16,11 @@ def refresh_servers():
             infoport=int(conn[1]),
         )
         server.refresh()
+
+def delete_duplicate_servers():
+    for server in models.Server.objects.all():
+        if server.pk:  # so it's not already deleted
+            models.Server.objects \
+                    .filter(ip=server.ip, infoport=server.infoport) \
+                    .exclude(pk=server.pk) \
+                    .delete()
