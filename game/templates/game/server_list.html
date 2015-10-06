@@ -6,13 +6,12 @@
 {% block content %}
 <table>
     <tr>
-        <th><i class="fa fa-globe"></i></th>
-        <th>{% trans 'Name' %}</th>
-        <th>{% trans 'Map' %}</th>
-        <th>{% trans 'Mode' %}</th>
-        <th>{% trans 'Players' %}</th>
-        <th>{% trans 'Pwd.' %}</td>
-    </tr>
+        <th><i class="fa fa-globe"></i>
+        <th>{% trans 'Name' %}
+        <th>{% trans 'Map' %}
+        <th>{% trans 'Mode' %}
+        <th>{% trans 'Players' %}
+        <th>{% trans 'Pwd.' %}
 
     {% for server in server_list %}
         <tr>
@@ -21,17 +20,14 @@
                      alt="{{ server.country }}"
                      title="{% trans server.country_name %}"
                      class="flag flag-{{ server.country|lower }}">
-            </td>
             <td>
                 <a href="{{ server.get_absolute_url }}">
                     {{ server.name }}
                 </a>
-            </td>
-            <td>{{ server.map.name }}</td>
-            <td>{{ server.mode.name }}</td>
-            <td>{{ server.numplayers }}/{{ server.maxplayers }}</td>
-            <td>{{ server.password }}</td>
-        </tr>
+            <td>{{ server.map.name }}
+            <td>{{ server.mode.name }}
+            <td>{{ server.numplayers }}/{{ server.maxplayers }}
+            <td>{{ server.password }}
     {% endfor %}
 </table>
 {% endblock %}

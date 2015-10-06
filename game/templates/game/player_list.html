@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+
+{% block title %}{% trans 'Players' %}{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>{% trans 'Name' %}
+        <th>{% trans 'Frags' %}
+        <th>{% trans 'Ping' %}
+        <th>{% trans 'Online for' %}
+        <th>{% trans 'Server' %}
+
+    {% for player in player_list %}
+        <tr>
+            <td>{{ player.name }}
+            <td>{{ player.frags }}
+            <td>{{ player.ping }}
+            <td>{{ player.online_since|timesince }}
+            <td>
+                <a href="{{ player.server.get_absolute_url }}">
+                    {{ player.server.name }}
+                </a>
+    {% endfor %}
+</table>
+{% endblock %}
