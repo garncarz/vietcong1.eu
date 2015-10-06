@@ -56,19 +56,20 @@
 </div>
 
 <table>
-    <tr>
-        <th>{% trans "Name" %}</th>
-        <th>{% trans "Frags" %}</th>
-        <th>{% trans "Ping" %}</th>
-        <th>{% trans "Online for" %}</th>
-    </tr>
+    <thead>
+        <tr>
+            <th>{% trans "Name" %}
+            <th>{% trans "Frags" %}
+            <th>{% trans "Ping" %}
+            <th>{% trans "Online for" %}
+
+    <tbody>
     {% for player in server.players.all %}
         <tr>
-            <td>{{ player.name }}</td>
-            <td>{{ player.frags }}</td>
-            <td>{{ player.ping }}</td>
-            <td>{{ player.online_since|timesince }}</td>
-        </tr>
+            <td>{{ player.name }}
+            <td>{{ player.frags }}
+            <td>{{ player.ping }}
+            <td>{{ player.online_since|timesince }}
     {% endfor %}
 </table>
 {% endblock %}

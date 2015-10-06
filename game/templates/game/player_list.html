@@ -5,13 +5,15 @@
 
 {% block content %}
 <table>
-    <tr>
-        <th>{% trans 'Name' %}
-        <th>{% trans 'Frags' %}
-        <th>{% trans 'Ping' %}
-        <th>{% trans 'Online for' %}
-        <th>{% trans 'Server' %}
+    <thead>
+        <tr>
+            <th>{% trans 'Name' %}
+            <th>{% trans 'Frags' %}
+            <th>{% trans 'Ping' %}
+            <th>{% trans 'Online for' %}
+            <th>{% trans 'Server' %}
 
+    <tbody>
     {% for player in player_list %}
         <tr>
             <td>{{ player.name }}

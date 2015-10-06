@@ -5,14 +5,16 @@
 
 {% block content %}
 <table>
-    <tr>
-        <th><i class="fa fa-globe"></i>
-        <th>{% trans 'Name' %}
-        <th>{% trans 'Map' %}
-        <th>{% trans 'Mode' %}
-        <th>{% trans 'Players' %}
-        <th>{% trans 'Pwd.' %}
+    <thead>
+        <tr>
+            <th><i class="fa fa-globe"></i>
+            <th>{% trans 'Name' %}
+            <th>{% trans 'Map' %}
+            <th>{% trans 'Mode' %}
+            <th>{% trans 'Players' %}
+            <th>{% trans 'Pwd.' %}
 
+    <tbody>
     {% for server in server_list %}
         <tr>
             <td>
