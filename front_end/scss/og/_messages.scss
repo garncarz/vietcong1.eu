@@ -1,0 +1,65 @@
+@mixin message {
+	display: table;
+	min-width: 30%;
+	max-width: 70%;
+	margin: 10px auto;
+	
+	// border: 4px groove;
+	padding: 5px 10px;
+}
+@mixin button {
+	// float: right;
+	border: 0;
+	background-color: transparent;
+	font-weight: bold;
+}
+
+.flash {
+	@include message;
+	font-weight: bold;
+	
+	button { @include button; }
+	
+	&.info {
+		border-color: $infoBorderColor;
+		background-color: $infoBgColor;
+		color: $infoColor;
+		button { color: $infoBorderColor }
+	}
+	
+	&.success {
+		border-color: $okBorderColor;
+		background-color: $okBgColor;
+		color: $okColor;
+		button { color: $okBorderColor }
+	}
+	
+	&.error {
+		border-color: $errorBorderColor;
+		background-color: $errorBgColor;
+		color: $errorColor;
+		button { color: $errorBorderColor }
+	}
+}
+
+.help {
+	@include message;
+	
+	border: 1px dashed;
+	border-color: $borderColor;
+	background-color: $helpBgColor;
+	
+	button {
+		@include button;
+		color: $infoBorderColor;
+	}
+	
+	&.beware {
+		@extend .flash.error;
+		button { color: $errorBorderColor }
+	}
+	
+	li { text-indent: -1em; }
+	dt { text-indent: 2em; }
+	dd { text-indent: 4em; }
+}

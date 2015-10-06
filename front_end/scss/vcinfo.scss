@@ -1,0 +1,10 @@
+@import "colors-vcinfo";
+@import "og/style-foundation";
+
+table {
+	thead { background: $bg2; }
+	tbody {
+		background: $tableBgColor;
+		td a { color: $tableLinkColor; }
+	}
+}

@@ -1,0 +1,51 @@
+$palette0: #564a42;
+$palette1: black;
+$palette1a: $palette1;
+$palette1b: $palette1;
+$paletteA1: #4d3722;
+$paletteB1: #f6a504;
+$paletteB2: #df561e;;
+$paletteB3: $paletteB1;
+$paletteC1: #fbdb00;
+$paletteC2: $paletteC1;
+$paletteC3: $paletteC1;
+$paletteC4: $paletteC1;
+$paletteD1: #e4c289;
+$paletteD2: #e9cfa3;
+$paletteD3: $paletteD1;
+$paletteE1: #e4c289;
+$paletteE2: $paletteE1;
+$paletteF1: darkgreen;
+
+$bg: $palette0;
+$bg2: $paletteA1;
+$bg3: $paletteD3;
+$bgOdd: $paletteD2;
+
+$textColor: $palette1;
+$extraColor: $paletteB1;
+$linkColor: $paletteB3;
+$trHoverColor: $paletteB2;
+$borderColor: $paletteA1;
+$disabledColor: $palette1b;
+
+$h1Color: $paletteC1;
+$h2Color: $paletteB3;
+$h3Color: $paletteC2;
+
+$tableBgColor: $paletteD1;
+$tableLinkColor: $paletteF1;
+
+$infoColor: $paletteA1;
+$okColor: $paletteC1;
+$errorColor: $paletteB2;
+$errorColorDetail: $palette1a;
+
+$infoBgColor: $palette0;
+$okBgColor: $paletteA1;
+$errorBgColor: $paletteC3;
+$helpBgColor: $infoBgColor;
+
+$infoBorderColor: $paletteB1;
+$okBorderColor: $paletteE2;
+$errorBorderColor: $paletteB2;

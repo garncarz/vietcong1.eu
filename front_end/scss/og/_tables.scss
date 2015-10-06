@@ -1,0 +1,55 @@
+table {
+	margin: 15px auto;
+	width: 100%;
+	// border: 3px groove $borderColor;
+	border-collapse: collapse;
+	line-height: 1.2;
+	
+	td, th { padding: 1px 4px; }
+
+	thead {
+		border: 1px solid $borderColor;
+	
+		th {
+			text-align: left;
+			input { width: 95%; }
+
+			&.grido-clmn {
+				span {
+					display: inline-block;
+					height: 0;
+
+					vertical-align: middle;
+
+					border-right: 4px solid transparent;
+					border-left: 4px solid transparent;
+				}
+				&.asc span { border-bottom: 4px solid $textColor; }
+				&.desc span { border-top: 4px solid $textColor; }
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			&:nth-child(odd):not(.disabled) { background-color: $bgOdd; }
+			&:hover, &:nth-child(odd):hover { background-color: $trHoverColor; }
+			&.disabled:hover {
+				background-image: linear-gradient(to left top, $bg3, $disabledColor);
+			}
+		}
+
+		td {
+			border: 1px groove $borderColor;
+			a { color: $extraColor; }
+			ul { padding: 4px; }
+		}
+	}
+
+	tfoot {
+		td { padding: 3px; }
+		.count { float: right; }
+		select { font-size: smaller; }
+	}
+
+}

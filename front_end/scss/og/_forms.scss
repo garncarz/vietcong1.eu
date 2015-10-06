@@ -1,0 +1,59 @@
+form {
+	input, select, .btn {
+		@extend .btn;
+		
+		min-width: 20px;
+		margin: 0;
+		padding: 1px 3px;
+	}
+	input {
+		text-align: left;
+
+		&:focus { box-shadow: $extraColor 1px 1px 2px; }
+		&.hide { display: none; }
+	}
+
+	.filter.outer, .form {
+		display: table;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+		
+		.items span, .row {
+			display: block;
+			margin-bottom: 3px;
+			label {
+				display: inline-block;
+				width: 100px;
+				font-weight: bold;
+			}
+		}
+		.buttons {
+			margin-left: 100px;
+			input { margin: 3px; }
+		}
+		input.button {
+			margin: 3px 3px 3px 104px;
+		}
+	}
+
+	.tt-dropdown-menu {
+		min-width: 100%;
+		padding: 0 5px;
+
+		border: 2px groove $borderColor;
+		border-radius: 3px;
+		box-shadow: $extraColor 1px 1px 2px;
+
+		background-color: $bg;
+
+		.tt-suggestion p {
+			font-weight: normal;
+			&:hover {
+				color: $extraColor;
+				background-image: linear-gradient(to bottom, $bg, $borderColor);
+			}
+		}
+	}
+}

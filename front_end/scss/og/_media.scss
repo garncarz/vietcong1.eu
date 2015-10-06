@@ -1,0 +1,50 @@
+.slim-only { display: none; }
+
+@media screen and (max-width: 800px) {
+	body {
+		height: auto;
+		margin: 5px;
+	}
+
+	.slim-only { display: block; }
+
+	#content, #menu, #menu .user {
+		position: relative;
+
+		width: auto;
+		height: auto;
+		min-height: 0;
+		margin: 5px auto;
+	}
+	#menu {
+		text-align: center;
+		a {
+			display: inline;
+			margin: 0 1em;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	html, body {
+		background-image: linear-gradient(to right, $bg3, $bg, $bg3);
+	}
+	
+	#container { max-width: 1200px; }
+}
+
+@media print {
+	body { height: auto; }
+	
+	#menu, .noprint { display: none; }
+	
+	#content {
+		position: relative;
+		width: auto;
+		height: auto;
+		min-height: 0;
+		margin: 5px auto;
+
+		border: none;
+	}
+}

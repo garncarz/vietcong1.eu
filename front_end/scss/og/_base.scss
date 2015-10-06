@@ -1,0 +1,158 @@
+html, body {
+	background-color: $bg;
+	color: $textColor;
+	font-family: Georgia, serif;
+}
+
+.noprint {
+	@media print {
+		display: none;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $linkColor;
+}
+p { text-align: justify; }
+li { list-style-position: inside; }
+dt { font-weight: bold; }
+dd { margin-bottom: 3px; }
+hr { border-color: $borderColor; }
+img { vertical-align: middle; }
+
+.center { text-align: center; }
+
+h1 {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	
+	// border-top: solid 1px $extraColor;
+	// border-bottom: solid 1px $extraColor;
+	
+	font-style: italic;
+	font-weight: bold;
+	color: $h1Color;
+}
+h2, h2 a { color: $h2Color; }
+h3 { color: $h3Color; }
+
+.error {
+	display: table;
+	min-width: 30%;
+	margin: 10px auto;
+
+	padding: 7px;
+
+	// border: 4px groove $errorBorderColor;
+	background-color: $errorBgColor;
+	
+	font-weight: bold;
+	color: $errorColor;
+	
+	small {
+		font-weight: normal;
+		color: $errorColorDetail;
+	}
+}
+
+.disabled {
+	background-color: $bg;
+	background-image: linear-gradient(to left top, $bg, $disabledColor);
+	cursor: default;
+	
+	&:hover {
+		background-color: $bg;
+		background-image: linear-gradient(to left top, $bg, $disabledColor);
+		color: $textColor;
+	}
+}
+div.disabled { padding: 2px; }
+
+.btn {
+	display: inline-block;
+	min-width: 40px;
+	width: auto;
+	margin: 3px 5px;
+	padding: 3px 5px;
+
+	background-color: $bg2;
+	background-image: linear-gradient(to right bottom, $bg, $borderColor);
+	
+	border: none;
+
+	vertical-align: middle;
+	text-align: center;
+	color: $textColor;
+
+	cursor: pointer;
+	
+	&:hover {
+		background-image: linear-gradient(to right bottom, $borderColor,
+			$bg);
+		color: $extraColor;
+	}
+
+	&.disabled { @extend .disabled; }
+	&.disabled:hover { @extend .disabled:hover; }
+	&:focus { box-shadow: $extraColor 1px 1px 2px; }
+	&.hide { display: none; }
+	
+	&.expand {
+		width: 100%;
+		margin: auto;
+	}
+}
+.button {
+	@extend .btn;
+	font-family: Cantarell;
+	font-size: 14.6667px;
+}
+button.close {
+	margin: 0;
+	padding: 0;
+}
+
+.pagination {
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 0 3px;
+	
+	text-align: center;
+	
+	.btn {
+		@extend .btn;
+		&.current, &.current:hover {
+			background-color: $bg2;
+			background-image: none;
+		}
+	}
+}
+
+code {
+	white-space: nowrap;
+	padding: 2px 3px;
+	border-radius: 2px;
+	background: mix($bg, $bg3, 80%);
+	
+	.plaincode & {
+		white-space: normal;
+		padding: initial;
+		background: transparent;
+	}
+	
+	.prettyprint & {
+		white-space: pre;
+		padding: initial;
+		background: transparent;
+	}
+
+}
+
+pre.break { white-space: pre-line; }
+
+ins { background: greenyellow; }
+del { background: hotpink; }
+
+.text-center { text-align: center !important; }

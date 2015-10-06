@@ -1,0 +1,69 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	position: relative;
+	margin: 0 auto;
+	height: 90%;
+}
+
+#menu {
+	position: fixed;
+	
+	width: 200px;
+	height: 90%;
+	
+	margin: 5px;
+	
+	padding-top: 20px;
+	
+	border: 5px groove $borderColor;
+	background-color: $bg2;
+	
+	a {
+		display: block;
+		text-align: center;
+		font-size: 15pt;
+		color: $extraColor;
+	}
+	
+	.user {
+		position: absolute;
+		bottom: 0;
+
+		width: 100%;
+		padding-bottom: 20px;
+		
+		span {
+			display: block;
+			text-align: center;
+
+			font: {
+				size: large;
+				style: italic;
+				family: "Courier New", Courier, monospace;
+			}
+		}
+	}
+}
+
+#content {
+	position: absolute;
+	margin-left: 230px;
+	overflow: hidden;
+	
+	min-height: 100%;
+	width: -moz-calc(100% - 270px);
+	width: -webkit-calc(100% - 270px);
+	width: calc(100% - 270px);
+	
+	margin-top: 5px;
+	
+	padding: 10px;
+	
+	background-color: $bg;
+	border: 5px groove $borderColor;
+}

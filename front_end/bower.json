@@ -1,0 +1,12 @@
+{
+    "name": "vietcong1.eu",
+    "dependencies": {
+        "jquery": "~1.9",
+        "jquery-migrate": "",
+        "foundation": "5.3.1",
+        "components-font-awesome": ""
+    },
+    "resolutions": {
+        "jquery": "~1.9"
+    }
+}

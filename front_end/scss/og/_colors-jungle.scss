@@ -1,0 +1,48 @@
+$palette0: #8a9d59;
+$palette1: black;
+$palette1a: $palette1;
+$palette1b: $palette1;
+$paletteA1: #38421f;
+$paletteB1: #ffffc0;
+$paletteB2: $paletteB1;
+$paletteB3: $paletteB1;
+$paletteC1: #d1b81f;
+$paletteC2: $paletteC1;
+$paletteC3: $paletteC1;
+$paletteC4: $paletteC1;
+$paletteD1: #5e502d;
+$paletteD2: $paletteD1;
+$paletteD3: $paletteD1;
+$paletteE1: #a3bb6e;
+$paletteE2: $paletteE1;
+$paletteF1: FireBrick;
+
+$bg: $palette0;
+$bg2: $paletteA1;
+$bg3: $paletteD3;
+$bgOdd: mix($paletteA1, $paletteE1);
+
+$textColor: $palette1;
+$extraColor: $paletteB1;
+$linkColor: $paletteB3;
+$trHoverColor: $paletteE1;
+$borderColor: $paletteD1;
+$disabledColor: $palette1b;
+
+$h1Color: $paletteC1;
+$h2Color: $paletteB3;
+$h3Color: $paletteC2;
+
+$infoColor: $paletteA1;
+$okColor: $paletteC1;
+$errorColor: $paletteF1;
+$errorColorDetail: $palette1a;
+
+$infoBgColor: $palette0;
+$okBgColor: $paletteA1;
+$errorBgColor: $paletteC3;
+$helpBgColor: $infoBgColor;
+
+$infoBorderColor: $paletteB1;
+$okBorderColor: $paletteE2;
+$errorBorderColor: $paletteF1;

@@ -1,0 +1,36 @@
+$topbar-link-color: $extraColor;
+$topbar-bg: $bg2;
+
+$topbar-dropdown-link-color: $extraColor;
+$topbar-dropdown-bg: $bg2;
+$topbar-dropdown-link-bg: $bg2;
+
+$topbar-link-color-hover: $palette0;
+$topbar-link-bg-hover: $extraColor;
+
+$topbar-title-font-size: 24px;
+$topbar-margin-bottom: 20px;
+
+@import "foundation/components/top-bar";
+
+.top-bar .name h1 a {
+	display: inline;
+	padding: 0;
+	
+	@extend h1;
+}
+
+// http://ryanfait.com/resources/footer-stick-to-bottom-of-page:
+
+$footer-height: 4em;
+
+html, body { height: 100%; }
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto (-$footer-height);
+}
+.footer, .push { height: $footer-height; }
+.footer { background: mix($bg, $bg2); }
+

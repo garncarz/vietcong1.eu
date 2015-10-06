@@ -1,0 +1,22 @@
+{
+    "name": "vietcong1.eu",
+    "dependencies": {
+        "bower": "",
+        "grunt": "",
+        "grunt-cli": "",
+        "grunt-contrib-concat": "",
+        "grunt-contrib-copy": "",
+        "grunt-contrib-sass": "",
+        "grunt-contrib-uglify": "",
+        "grunt-contrib-watch": ""
+    },
+
+    "jsFiles": [
+        "bower_components/jquery/jquery.js",
+        "bower_components/jquery-migrate/jquery-migrate.js",
+        "bower_components/foundation/js/foundation.js",
+        "bower_components/foundation/js/foundation/foundation.orbit.js",
+        "js/jquery.nospam.js",
+        "js/vietcong.js"
+    ]
+}
