@@ -26,7 +26,10 @@
                 <a href="{{ server.get_absolute_url }}">
                     {{ server.name }}
                 </a>
-            <td>{{ server.map.name }}
+            <td>
+                <a href="{{ server.map.get_absolute_url }}">
+                    {{ server.map.name }}
+                </a>
             <td>{{ server.mode.name }}
             <td>{{ server.numplayers }}/{{ server.maxplayers }}
             <td>{{ server.password }}

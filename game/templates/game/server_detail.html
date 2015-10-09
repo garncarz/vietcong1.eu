@@ -9,7 +9,7 @@
         <dl>
             <dt>{% trans "Map" %}
             <dd>
-                <a href="{# TODO #}">
+                <a href="{{ server.map.get_absolute_url }}">
                     {{ server.map.name }}
                 </a>
                 ({{ server.mode.name }})

@@ -20,14 +20,25 @@ class Map(models.Model):
     name = models.CharField(max_length=256, unique=True)
     modes = models.ManyToManyField(Mode)
 
+    def get_absolute_url(self):
+        return reverse('game:map_detail', kwargs={'pk': self.pk})
+
+
+class ServerQuerySet(models.QuerySet):
+    def online(self):
+        return self.filter(online=True)
+
 
 class Server(models.Model):
+    objects = ServerQuerySet.as_manager()
+
     ip = models.GenericIPAddressField()
     infoport = models.PositiveSmallIntegerField(default=15425)
     port = models.PositiveSmallIntegerField(default=5425)
 
     name = models.CharField(max_length=256)
-    map = models.ForeignKey(Map, null=True, blank=True)
+    map = models.ForeignKey(Map, null=True, blank=True,
+                            related_name='servers')
     mode = models.ForeignKey(Mode, null=True, blank=True)
 
     country = models.CharField(max_length=2, null=True, blank=True)

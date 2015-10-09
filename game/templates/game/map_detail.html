@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% load i18n %}
+
+{% block title %}{{ map.name }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="small-6 columns">
+        <dl>
+            <dt>{% trans 'Known modes' %}:
+            {% for mode in map.modes.all %}
+                <dd>{{ mode.name }}
+            {% endfor %}
+        </dl>
+    </div>
+
+    <div class="small-6 columns">
+        <dl>
+            <dt>{% trans 'Being played right now' %}:
+            {% for server in map.servers.online %}
+                <dd>
+                    <a href="{{ server.get_absolute_url }}">
+                        {{ server.name }}
+                    </a>
+                    ({{ server.numplayers }})
+            {% endfor %}
+        </dl>
+    </div>
+</div>
+{% endblock %}

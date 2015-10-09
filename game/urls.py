@@ -12,4 +12,7 @@ urlpatterns = [
     url(r'^players$',
         views.PlayerListView.as_view(),
         name='player_list'),
+    url(r'^map/(?P<pk>\d+)$',
+        views.MapDetailView.as_view(),
+        name='map_detail'),
 ]

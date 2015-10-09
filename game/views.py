@@ -25,3 +25,7 @@ class PlayerListView(generic.ListView):
             .select_related('server')
             .filter(online=True, server__online=True)
             .all())
+
+
+class MapDetailView(generic.DetailView):
+    model = models.Map
