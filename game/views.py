@@ -16,6 +16,10 @@ class ServerListView(generic.ListView):
 class ServerDetailView(generic.DetailView):
     model = models.Server
 
+    def get_object(self, queryset=None):
+        queryset = queryset or self.get_queryset()
+        return queryset.get(ip=self.kwargs['ip'], port=self.kwargs['port'])
+
 
 class PlayerListView(generic.ListView):
     model = models.Player

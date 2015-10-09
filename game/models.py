@@ -61,7 +61,8 @@ class Server(models.Model):
         return '%s:%s' % (self.ip, self.infoport)
 
     def get_absolute_url(self):
-        return reverse('game:server_detail', kwargs={'pk': self.pk})
+        return reverse('game:server_detail',
+                       kwargs={'ip': self.ip, 'port': self.port})
 
     def refresh(self):
         try:

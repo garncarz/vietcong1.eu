@@ -6,7 +6,7 @@ urlpatterns = [
     url(r'^$',
         views.ServerListView.as_view(),
         name='server_list'),
-    url(r'^(?P<pk>\d+)$',  # TODO ip:port
+    url(r'^(?P<ip>[\d.]+):(?P<port>\d+)$',
         views.ServerDetailView.as_view(),
         name='server_detail'),
     url(r'^players$',
