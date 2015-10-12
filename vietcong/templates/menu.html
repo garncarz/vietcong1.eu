@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n staticfiles helper_tags %}
 
 <ul class="right">
 
@@ -8,4 +8,20 @@
             <li><a href="{% url 'game:server_list' %}">{% trans 'Servers' %}</a>
             <li><a href="{% url 'game:player_list' %}">{% trans 'Players' %}</a>
         </ul>
+
+    {% get_current_language as LANGUAGE_CODE %}
+    {% get_available_languages as LANGUAGES %}
+    {% get_language_info_list for LANGUAGES as languages %}
+    {% for lang in languages %}
+        {% if lang.code != LANGUAGE_CODE %}
+            <li>
+                <a href="{% change_lang lang.code %}"
+                        title="{{ lang.name_local }}">
+                    <img src="{% static 'blank.gif' %}"
+                         class="flag flag-{% language_flag lang.code %}"
+                         alt="{{ lang.name_local }}">
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
 </ul>
