@@ -1,0 +1,783 @@
+# Gettext keys exported by GettextTranslator and Translation Panel
+# Created: 2014-08-08 03:10:34
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2014-08-08 03:10+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4 ? 1 : 2));\n"
+
+msgid "(Nick)name:"
+msgstr "Jméno/přezdívka:"
+
+msgid "Being played right now"
+msgstr "Zrovna se hraje"
+
+msgid "Couldn't connect to the server."
+msgstr "Připojení k serveru se nezdařilo."
+
+msgid "Country"
+msgstr "Země"
+
+msgid "Dedicated server"
+msgstr "Dedikovaný server"
+
+msgid "Files have to be pictures (.jpg or .png)."
+msgstr "Soubory musí být obrázky (.jpg nebo .png)."
+
+msgid "Fist Alpha"
+msgstr "Fist Alpha"
+
+msgid "Frags"
+msgstr "Fragy"
+
+msgid "Golden"
+msgstr "Zlatý"
+
+msgid "IP:port"
+msgstr "IP:port"
+
+msgid "Jungle"
+msgstr "Džungle"
+
+msgid "Known modes"
+msgstr "Známé módy"
+
+msgid "Last Pictures"
+msgstr "Poslední obrázky"
+
+msgid "Light"
+msgstr "Světlý"
+
+msgid "Map"
+msgstr "Mapa"
+
+msgid "Map Name"
+msgstr "Název mapy"
+
+msgid "Maps"
+msgstr "Mapy"
+
+msgid "Maximum players"
+msgstr "Maximálně hráčů"
+
+msgid "Mode"
+msgstr "Mód"
+
+msgid "Online for"
+msgstr "Čas online"
+
+msgid "Picture has been uploaded and is pending approval."
+msgstr "Obrázek byl nahrán a čeká na schválení."
+
+msgid "Picture has been uploaded."
+msgstr "Obrázek byl nahrán."
+
+msgid "Pictures have been uploaded and are pending approval."
+msgstr "Obrázky byly nahrány a čekají na schválení."
+
+msgid "Pictures have been uploaded."
+msgstr "Obrázky byly nahrány."
+
+msgid "Ping"
+msgstr "Ping"
+
+msgid "Players"
+msgstr "Hráči"
+
+msgid "Players online"
+msgstr "Hráči online"
+
+msgid "Please enter a valid IP address."
+msgstr "Prosím zadejte platnou IP adresu."
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Port has to be a number."
+msgstr "Port musí být číslo."
+
+msgid "Program path:"
+msgstr "Cesta k programu:"
+
+msgid "Pwd."
+msgstr "Heslo"
+
+msgid "Random Pictures"
+msgstr "Náhodné obrázky"
+
+msgid "Runner"
+msgstr "Spouštěč"
+
+msgid "Server"
+msgstr "Server"
+
+msgid "Server is no longer online."
+msgstr "Server již není online."
+
+msgid "Servers"
+msgstr "Servery"
+
+msgid "Style"
+msgstr "Vzhled"
+
+msgid "The file has to be a picture (.jpg or .png)."
+msgstr "Soubor musí být obrázek (.jpg nebo .png)."
+
+msgid "The picture has been disabled."
+msgstr "Obrázek byl zakázán."
+
+msgid "The picture has been enabled."
+msgstr "Obrázek byl povolen."
+
+msgid "The picture has been removed."
+msgstr "Obrázek byl smazán."
+
+msgid "The server has been registered."
+msgstr "Server byl registrován."
+
+msgid "Trusted"
+msgstr "Spolehlivý"
+
+msgid "Upload a picture"
+msgstr "Nahrát obrázek"
+
+msgid "Upload a picture for"
+msgstr "Nahrát obrázek pro"
+
+msgid "Upload a picture for the map"
+msgstr "Nahrát obrázek pro mapu"
+
+msgid "Upload a picture of the map"
+msgstr "Nahrát obrázek mapy"
+
+msgid "Uploaded by %s on %s"
+msgstr "Nahrál(a) %s %s"
+
+msgid "Version"
+msgstr "Verze"
+
+msgid "Version of game"
+msgstr "Verze hry"
+
+msgid "Vietnam mode"
+msgstr "Vietnam mód"
+
+msgid "#%d"
+msgstr "č. %d"
+
+msgid "%d hr."
+msgstr "%d hod."
+
+msgid "%d min."
+msgstr "%d min."
+
+msgid "<undefined>"
+msgstr "<nedefinováno>"
+
+msgid "Access Denied"
+msgstr "Přístup zamítnut"
+
+msgid "Actions"
+msgstr "Akce"
+
+msgid "Add User"
+msgstr "Přidat uživatele"
+
+msgid "Add a comment"
+msgstr "Přidat komentář"
+
+msgid "Added"
+msgstr "Vloženo"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "Administrator"
+msgstr "Administrátor"
+
+msgid "All"
+msgstr "Vše"
+
+msgid "Back"
+msgstr "Zpět"
+
+msgid "Cancel"
+msgstr "Storno"
+
+msgid "Change Password"
+msgstr "Změna hesla"
+
+msgid "Change password"
+msgstr "Změnit heslo"
+
+msgid "Choose"
+msgstr "Vybrat"
+
+msgid "Choose one option."
+msgstr "Vyberte si jednu možnost."
+
+msgid "Comment added."
+msgstr "Komentář přidán."
+
+msgid "Comment:"
+msgstr "Komentář:"
+
+msgid "Comments"
+msgstr "Komentáře"
+
+msgid "Congratulation, now you can sign in!"
+msgstr "Gratuluji, nyní se můžete přihlásit!"
+
+msgid "Connection failed."
+msgstr "Připojení se nezdařilo."
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Content"
+msgstr "Obsah"
+
+msgid "Content:"
+msgstr "Obsah:"
+
+msgid "Corrupted code."
+msgstr "Chybný kód."
+
+msgid "Corrupted code. Haven't you changed your password already?"
+msgstr "Chybný kód. Nezměnili jste si již heslo?"
+
+msgid "Corrupted code. Haven't you verified yourself already?"
+msgstr "Chybný kód. Nepotvrdili jste již svou registraci předtím?"
+
+msgid "Create new"
+msgstr "Vytvořit nový"
+
+msgid "Created"
+msgstr "Vytvořeno"
+
+msgid "Czech"
+msgstr "čeština"
+
+msgid "Delete"
+msgstr "Smazat"
+
+msgid "Disable"
+msgstr "Zakázat"
+
+msgid "Do you really want to remove user %s?"
+msgstr "Opravdu chcete smazat uživatele %s?"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "E-mail has been sent to you, check it out."
+msgstr "Byl Vám odeslán e-mail, přečtěte si jej, prosím."
+
+msgid "E-mail:"
+msgstr "E-mail:"
+
+msgid "Edit"
+msgstr "Upravit"
+
+msgid "Enable"
+msgstr "Povolit"
+
+msgid "Enabled"
+msgstr "Povolený"
+
+msgid "English"
+msgstr "angličtina"
+
+msgid "Enter a password, please."
+msgstr "Zadejte heslo, prosím."
+
+msgid "Enter a valid email address, please."
+msgstr "Zadejte platnou emailovou adresu, prosím."
+
+msgid "Enter login, please."
+msgstr "Zadejte login, prosím."
+
+msgid "Enter name, please."
+msgstr "Zadejte jméno, prosím."
+
+msgid "Error"
+msgstr "Chyba"
+
+msgid "Exclude"
+msgstr "Vyloučit"
+
+msgid "Excluded"
+msgstr "Vyňato"
+
+msgid "File"
+msgstr "Soubor"
+
+msgid "Files:"
+msgstr "Soubory:"
+
+msgid "Fill in \"nospam\""
+msgstr "Napište „nospam“"
+
+msgid "Fill in one entry which you remember about your user account."
+msgstr "Vyplňte jeden údaj, který si o svém uživatelském účtě pamatujete."
+
+msgid "For the sake of security, you have been signed out due to inactivity."
+msgstr "Z důvodu bezpečnosti jste byli po delší neaktivitě odhlášeni."
+
+msgid "Form has expired."
+msgstr "Platnost formuláře vypršela."
+
+msgid "Hello, %s!"
+msgstr "Zdravím, %s!"
+
+msgid "History"
+msgstr "Historie"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "IP:"
+msgstr "IP:"
+
+msgid "Include"
+msgstr "Včlenit"
+
+msgid "Included"
+msgstr "Včleněno"
+
+msgid "Installation"
+msgstr "Instalace"
+
+msgid "Introduction"
+msgstr "Úvod"
+
+msgid "Items %d - %d of %d"
+msgstr "Položky %d – %d z %d"
+
+msgid "Items per page"
+msgstr "Položek na stránku"
+
+msgid "Kidding, just %s."
+msgstr "Kecám, jenom %s."
+
+msgid "Language"
+msgstr "Jazyk"
+
+msgid "Language:"
+msgstr "Jazyk:"
+
+msgid "Lists"
+msgstr "Seznamy"
+
+msgid "Loading..."
+msgstr "Načítám..."
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Login:"
+msgstr "Login:"
+
+msgid "Lost Password"
+msgstr "Ztracené heslo"
+
+msgid "Lost Password Recovery"
+msgstr "Nové heslo"
+
+msgid "Main Page"
+msgstr "Hlavní stránka"
+
+msgid "Method Not Allowed"
+msgstr "Metoda nepovolena"
+
+msgid "Modified:"
+msgstr "Změněný:"
+
+msgid "Name"
+msgstr "Jméno"
+
+msgid "Name:"
+msgstr "Jméno:"
+
+msgid "New User"
+msgstr "Nový uživatel"
+
+msgid "New User Registration"
+msgstr "Registrace uživatele"
+
+msgid "New password again:"
+msgstr "Nové heslo pro kontrolu:"
+
+msgid "New password's length must be at least %d."
+msgstr "Minimální délka nového hesla je %d."
+
+msgid "New password:"
+msgstr "Nové heslo:"
+
+msgid "New passwords have to match."
+msgstr "Nová hesla se musí shodovat."
+
+msgid "News"
+msgstr "Novinky"
+
+msgid "Next"
+msgstr "Vpřed"
+
+msgid "No"
+msgstr "Ne"
+
+msgid "No results."
+msgstr "Žádný záznam."
+
+msgid "No spam here, please!"
+msgstr "Nespamujte to tady, prosím!"
+
+msgid "No such user."
+msgstr "Daný uživatel neexistuje."
+
+msgid "Not signed in"
+msgstr "Nepřihlášen"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Old password has to be filled."
+msgstr "Staré heslo musí být vyplněno."
+
+msgid "Old password is not correct."
+msgstr "Staré heslo nesouhlasí."
+
+msgid "Old password:"
+msgstr "Staré heslo:"
+
+msgid "Page Not Found"
+msgstr "Stránka nenalezena"
+
+msgid "Password"
+msgstr "Heslo"
+
+msgid "Password Change"
+msgstr "Změna hesla"
+
+msgid "Password again:"
+msgstr "Heslo pro kontrolu:"
+
+msgid "Password's minimal length is %d."
+msgstr "Minimální délka hesla je %d."
+
+msgid "Password:"
+msgstr "Heslo:"
+
+msgid "Passwords don't match."
+msgstr "Hesla se musí shodovat."
+
+msgid "Passwords have to match."
+msgstr "Hesla se musí shodovat."
+
+msgid "Picture"
+msgstr "Obrázek"
+
+msgid "Pictures"
+msgstr "Obrázky"
+
+msgid "Please choose something."
+msgstr "Něco prosím vyberte."
+
+msgid "Please complete mandatory field."
+msgstr "Vyplňte, prosím, požadovanou položku."
+
+msgid "Previous"
+msgstr "Zpět"
+
+msgid "Really remove?"
+msgstr "Opravdu ostranit?"
+
+msgid "Register"
+msgstr "Registrovat"
+
+msgid "Registration"
+msgstr "Registrace"
+
+msgid "Reload"
+msgstr "Načíst znovu"
+
+msgid "Remember me!"
+msgstr "Pamatuj si mě!"
+
+msgid "Remove"
+msgstr "Odstranit"
+
+msgid "Reset"
+msgstr "Resetovat výběr"
+
+msgid "Reset password"
+msgstr "Resetovat heslo"
+
+msgid "Role"
+msgstr "Role"
+
+msgid "Run"
+msgstr "Spustit"
+
+msgid "Save"
+msgstr "Uložit"
+
+msgid "Search"
+msgstr "Vyhledat"
+
+msgid "Select"
+msgstr "Vybrat"
+
+msgid "Send"
+msgstr "Odeslat"
+
+msgid "Server Error"
+msgstr "Chyba serveru"
+
+msgid "Set password"
+msgstr "Nastavit heslo"
+
+msgid "Settings"
+msgstr "Nastavení"
+
+msgid "Sign In"
+msgstr "Přihlášení"
+
+msgid "Sign Out"
+msgstr "Odhlásit"
+
+msgid "Sign in"
+msgstr "Přihlásit"
+
+msgid "Sign out"
+msgstr "Odhlásit"
+
+msgid "Size"
+msgstr "Velikost"
+
+msgid "Skin"
+msgstr "Vzhled"
+
+msgid "So I don't know you, starting from now."
+msgstr "Tak a teď tě neznám..."
+
+msgid "Sorry, this login is already registered."
+msgstr "Pardon, tento login je již obsazen."
+
+msgid "Text"
+msgstr "Text"
+
+msgid "The comment has been disabled."
+msgstr "Komentář byl zakázán."
+
+msgid "The comment has been enabled."
+msgstr "Komentář byl povolen."
+
+msgid "The link is valid only for 24 hours!"
+msgstr "Odkaz je platný pouze po dobu 24 hodin!"
+
+msgid "The old password is not correct."
+msgstr "Staré heslo nesouhlasí!"
+
+msgid "The password has been changed."
+msgstr "Heslo změněno."
+
+msgid "The password's minimal length is %d."
+msgstr "Minimální délka hesla je %d."
+
+msgid "The settings were saved."
+msgstr "Nastavení bylo uloženo."
+
+msgid "The user has been added."
+msgstr "Uživatel vložen."
+
+msgid "The user has been disabled."
+msgstr "Uživatel zakázán."
+
+msgid "The user has been enabled."
+msgstr "Uživatel povolen."
+
+msgid "The user has been removed."
+msgstr "Uživatel odstraněn."
+
+msgid "The user has been updated."
+msgstr "Uživatel upraven."
+
+msgid "There are no users waiting for approval."
+msgstr "Žádní uživatelé nečekají na schválení."
+
+msgid "This e-mail is already registered."
+msgstr "Tento e-mail je již registrován."
+
+msgid "This field is required."
+msgstr "Toto políčko je nutné vyplnit."
+
+msgid "This user can not be removed."
+msgstr "Tento uživatel nemůže být smazán."
+
+msgid "This user can not be updated."
+msgstr "Tento uživatel nemůže být pozměněn."
+
+msgid "Title:"
+msgstr "Titulek:"
+
+msgid "Too late!"
+msgstr "Pozdě!"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Upload"
+msgstr "Nahrát"
+
+msgid ""
+"Use only small basic alphanumeric symbols, please, and start with a letter."
+msgstr ""
+"Použijte pouze malá písmena bez diakritiky a číslice, prosím, a začněte s "
+"písmenem."
+
+msgid "Use this link to finish your registration:"
+msgstr "Použijte tento odkaz k dokončení Vaší registrace:"
+
+msgid "Use this link to reset your password:"
+msgstr "Použijte tento odkaz k novému nastavení hesla:"
+
+msgid "User"
+msgstr "Uživatel"
+
+msgid "User not enabled (yet?)."
+msgstr "Uživatel není (zatím?) povolen."
+
+msgid "Users"
+msgstr "Uživatelé"
+
+msgid "Webalize needs to be unique."
+msgstr "Webalize musí být jedinečné."
+
+msgid "Webalize:"
+msgstr "Webalize:"
+
+msgid "Welcome!"
+msgstr "Vítejte!"
+
+msgid "Where's your code?"
+msgstr "Kde je Váš kód?"
+
+msgid "Who are you?"
+msgstr "Kdo jsi?"
+
+msgid "Who are you??"
+msgstr "Kdo jsi??"
+
+msgid "Wrong password."
+msgstr "Chybné heslo"
+
+msgid "Yes"
+msgstr "Ano"
+
+msgid "You can use <, <=, >, >=, <>. e.g. \">= %d\""
+msgstr "Můžete použít <, <=, >, >=, <>. Např. \">= %d\"."
+
+msgid "You can't do that!"
+msgstr "No dovolte!"
+
+msgid "You have been registered. Please wait for approval."
+msgstr "Uživatel vložen. Počkejte na schválení."
+
+msgid "You have to be signed in to use this functionality."
+msgstr "Pro použití vyžadované funkcionality je nutné se přihlásit."
+
+msgid "Your login is %s."
+msgstr "Vaše přihlašovací jméno (login) je %s."
+
+msgid "Your login is:"
+msgstr "Vaše přihlašovací jméno (login) je:"
+
+msgid "Your login, Your Majesty."
+msgstr "Vaše ctěné přihlašovací jméno, prosím."
+
+msgid "Your name, please."
+msgstr "Zadejte jméno, prosím."
+
+msgid "Your password or your life!"
+msgstr "Heslo, nebo život!"
+
+msgid "error"
+msgstr "chyba"
+
+msgid "Australia"
+msgstr "Austrálie"
+
+msgid "Austria"
+msgstr "Rakousko"
+
+msgid "Belgium"
+msgstr "Belgie"
+
+msgid "Brazil"
+msgstr "Brazílie"
+
+msgid "Canada"
+msgstr "Kanada"
+
+msgid "Czech Republic"
+msgstr "Česká republika"
+
+msgid "Finland"
+msgstr "Finsko"
+
+msgid "France"
+msgstr "Francie"
+
+msgid "Germany"
+msgstr "Německo"
+
+msgid "Hungary"
+msgstr "Maďarsko"
+
+msgid "Italy"
+msgstr "Itálie"
+
+msgid "Japan"
+msgstr "Japonsko"
+
+msgid "Korea, Republic of"
+msgstr "Jižní Korea"
+
+msgid "Mexico"
+msgstr "Mexiko"
+
+msgid "Netherlands"
+msgstr "Nizozemsko"
+
+msgid "Poland"
+msgstr "Polsko"
+
+msgid "Romania"
+msgstr "Rumunsko"
+
+msgid "Russian Federation"
+msgstr "Rusko"
+
+msgid "Slovakia"
+msgstr "Slovensko"
+
+msgid "Slovenia"
+msgstr "Slovinsko"
+
+msgid "Sweden"
+msgstr "Švédsko"
+
+msgid "Switzerland"
+msgstr "Švýcarsko"
+
+msgid "Ukraine"
+msgstr "Ukrajina"
+
+msgid "United Kingdom"
+msgstr "Velká Británie"
+
+msgid "United States"
+msgstr "USA"
