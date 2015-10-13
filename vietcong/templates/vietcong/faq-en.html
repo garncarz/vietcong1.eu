@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% load markdown_deux_tags staticfiles %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block content %}
+{% markdown %}
+#### There are no Vietcong game servers online anymore. Really?
+
+Fortunately, no. Only the GameSpy support has ended, as had been announced. However, with this support gone, you will see an empty server list in your game. Bear in mind, this doesn't affect hosting dedicated servers and connecting to them directly.
+
+#### I want my server list back! Is there any solution?
+
+Yes — [Qtracker](http://www.qtracker.com). It offers a fully working alternate master server. Even Vietcong1.eu uses it for finding new servers. Furthermore, its “installation” is really simple.
+
+#### How do I make Qtracker work?
+
+Download [this script]({% static 'qtracker.bat' %}), run it (as an administrator, if needed) and you're done!
+
+In case of any problems, or if you want to do this manually, just run program Notepad, open file `C:\WINDOWS\system32\drivers\etc\hosts` and add the following line to the end of the file:
+
+`65.112.87.186 master.gamespy.com`
+
+Hints:
+
+- It may be necessary to run Notepad as administrator, again, so the system lets you save the file.
+- It may be necessary to temporarily disable your antivirus.
+- Is your main drive really C:?
+
+#### I host a server. Should I also switch to Qtracker?
+
+Definitely! If you don't do it, your server won't be included in any server list, thus – unfortunately – won't be noticed by anyone.
+{% endmarkdown %}
+{% endblock %}

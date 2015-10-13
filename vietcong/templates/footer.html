@@ -1,16 +1,16 @@
 {% load i18n %}
-{% get_current_language as lang %}
+{% get_current_language as LANG_CODE %}
 
 <div class="row">
     <p class="text-center">
-    {% if lang.code == 'cs' %}
+    {% if LANG_CODE == 'cs' %}
         Toto jsou neoficiální, fanouškovské stránky hry Vietcong.
     {% else %}
         This is the unofficial, fan site of game Vietcong.
     {% endif %}
     {% trans 'Contact' %}:
     <a class="email" rel="admin//vietcong1/eu">admin//vietcong1/eu</a><br>
-    {% if lang.code == 'cs' %}
+    {% if LANG_CODE == 'cs' %}
         Jako alternativní master server je použit
     {% else %}
         The alternative master server used is

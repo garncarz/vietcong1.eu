@@ -1,7 +1,9 @@
 decorator==4.0.4
 Django==1.8.4
+django-markdown-deux==1.0.5
 ipython==4.0.0
 ipython-genutils==0.1.0
+markdown2==2.3.0
 path.py==8.1.1
 pexpect==3.3
 pickleshare==0.5

@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% load markdown_deux_tags staticfiles %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block content %}
+{% markdown %}
+#### Žádný herní server Vietcongu již neběží. Vážně?
+
+Naštěstí ne. Pouze GameSpy ukončilo svou podporu hry, jak bylo oznámeno. Znamená to jediné: neuvidíte v seznamu serverů ve hře žádné položky. Neovlivňuje to však hostování serverů a přímé spojení s nimi.
+
+#### Já ten seznam serverů ale chci! Existuje řešení?
+
+Ano — [Qtracker](http://www.qtracker.com). Nabízí plnohodnotnou alternativu. I Vietcong1.eu jej používá k vyhledávání nových serverů. Co víc — jeho „instalace“ je vskutku jednoduchá.
+
+#### Jak zprovozním Qtracker?
+
+Stáhněte si [tento skript]({% static 'qtracker.bat' %}), spusťte jej (jako administrátor, pokud je třeba) a je to!
+
+V případě problémů, či pokud chcete změnu provést manuálně, stačí spustit Poznámkový blok, otevřít soubor `C:\WINDOWS\system32\drivers\etc\hosts` a přidat následující řádek na konec souboru:
+
+`65.112.87.186 master.gamespy.com`
+
+Rady:
+
+- Může být třeba spustit Poznámkový blok jako administrátor, aby systém dovolil soubor uložit.
+- Může být třeba dočasně vypnout antivirus.
+- Je Váš hlavní disk opravdu C:?
+
+#### Hostuji server. Taky mám přejít k Qtrackeru?
+
+Rozhodně ano! Pokud to neuděláte, Váš server nebude obsažen v žádném seznamu serverů a nikdo se tedy o něm bohužel nedozví.
+{% endmarkdown %}
+{% endblock %}

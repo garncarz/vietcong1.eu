@@ -1,0 +1,20 @@
+{% load i18n %}
+{% get_current_language as LANG_CODE %}
+
+<div class="flash error">
+    {% if LANG_CODE == 'cs' %}
+        <h3>
+            <a href="{% url 'faq' %}">Nevidíte ve hře žádné servery?</a>
+        </h3>
+        <p>
+            Prosím čtěte <a href="{% url 'faq' %}">FAQ</a>.
+            Nalezte tam popis jednoduchého řešení.
+    {% else %}
+        <h3>
+            <a href="{% url 'faq' %}">Can't see any servers in the game?</a>
+        </h3>
+        <p>
+            Please read <a href="{% url 'faq' %}">FAQ</a>.
+            An easy solution is explained there.
+    {% endif %}
+</div>
