@@ -25,6 +25,11 @@ $ node_modules/.bin/grunt
 
 ## Run
 
-Needed: `./manage.py migrate`
+Needed:
+
+- `./manage.py migrate` for synchronizing the database schema.
+- `./manage.py compilemessages` for compiling translations ([gettext](https://www.gnu.org/software/gettext/) needed).
+
+Run:
 
 `./manage.py runserver` when developing.
