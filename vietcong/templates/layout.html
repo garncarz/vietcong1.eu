@@ -1,21 +1,6 @@
-{% load staticfiles %}
+{% extends 'layout-html.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Vietcong1.eu</title>
-
-    <link rel="stylesheet" href="{% static 'css/jungle.css' %}">
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'flags/flags.css' %}">
-    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
-
-    <script src="{% static 'js/scripts.min.js' %}"></script>
-</head>
-
+{% block body %}
 <body role="document">
 
 <div class="wrapper">
@@ -25,7 +10,7 @@
         <ul class="title-area">
             <li class="name">
                 <h1>
-                    <a href="{% url 'game:server_list' %}">Vietcong1.eu</a>
+                    <a href="{% url 'home' %}">Vietcong1.eu</a>
                     &raquo; {% block title %}{% endblock %}
                 </h1>
             </li>
@@ -56,4 +41,4 @@
 </div>
 
 </body>
-</html>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}{% endblock %} | Vietcong1.eu</title>
+
+    <link rel="stylesheet" href="{% static 'css/jungle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'flags/flags.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+
+    <script src="{% static 'js/scripts.min.js' %}"></script>
+</head>
+
+{% block body %}{% endblock %}
+
+</html>

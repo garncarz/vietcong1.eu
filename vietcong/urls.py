@@ -8,7 +8,8 @@ from . import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', RedirectView.as_view(pattern_name='game:server_list',
-                                    permanent=False)),
+                                    permanent=False),
+               name='home'),
 ] + i18n_patterns(
     url(r'^faq', views.FAQView.as_view(), name='faq'),
     url(r'^', include('game.urls', namespace='game')),
