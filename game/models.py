@@ -1,3 +1,4 @@
+from datetime import timedelta
 import logging
 import re
 import socket
@@ -5,6 +6,7 @@ import socket
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
+from django.utils import timezone
 
 from core import geoip
 
@@ -29,8 +31,30 @@ class ServerQuerySet(models.QuerySet):
         return self.filter(online=True)
 
 
+class ServerManager(models.Manager):
+    def pre_refresh(self):
+        self.model.objects.update(online=False)
+
+    def post_refresh(self):
+        self.model.objects \
+            .filter(online=False, offline_since=None) \
+            .update(offline_since=timezone.now())
+        self.model.objects \
+            .filter(offline_since__lt=timezone.now() - timedelta(hours=1)) \
+            .delete()
+        self.delete_duplicates()
+
+    def delete_duplicates(self):
+        for server in self.model.objects.all():
+            if server.pk:  # so it's not already deleted
+                self.model.objects \
+                    .filter(ip=server.ip, infoport=server.infoport) \
+                    .exclude(pk=server.pk) \
+                    .delete()
+
+
 class Server(models.Model):
-    objects = ServerQuerySet.as_manager()
+    objects = ServerManager.from_queryset(ServerQuerySet)()
 
     ip = models.GenericIPAddressField()
     infoport = models.PositiveSmallIntegerField(default=15425)
@@ -134,7 +158,17 @@ class Server(models.Model):
         self.save()
 
 
+class PlayerManager(models.Manager):
+    def pre_refresh(self):
+        self.model.objects.update(online=False)
+
+    def post_refresh(self):
+        self.model.objects.filter(online=False).delete()
+
+
 class Player(models.Model):
+    objects = PlayerManager()
+
     name = models.CharField(max_length=256)
     ping = models.PositiveSmallIntegerField(default=0)
     frags = models.PositiveSmallIntegerField(default=0)

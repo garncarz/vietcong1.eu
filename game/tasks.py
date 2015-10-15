@@ -1,9 +1,14 @@
 from urllib.request import urlopen
+from django.db import transaction
 
-from . import models
+from .models import Server, Player
 
 
+@transaction.atomic
 def refresh_servers():
+    Server.objects.pre_refresh()
+    Player.objects.pre_refresh()
+
     source = urlopen(
         'http://www.qtracker.com/server_list_details.php?game=vietcong'
     )
@@ -11,16 +16,14 @@ def refresh_servers():
     conns = [str(line, encoding='utf8').split(':')
              for line in lines if line.strip()]
     for conn in conns:
-        server, _ = models.Server.objects.get_or_create(
+        server, _ = Server.objects.get_or_create(
             ip=conn[0],
             infoport=int(conn[1]),
         )
+
+    # some servers might not come from Qtracker
+    for server in Server.objects.all():
         server.refresh()
 
-def delete_duplicate_servers():
-    for server in models.Server.objects.all():
-        if server.pk:  # so it's not already deleted
-            models.Server.objects \
-                    .filter(ip=server.ip, infoport=server.infoport) \
-                    .exclude(pk=server.pk) \
-                    .delete()
+    Server.objects.post_refresh()
+    Player.objects.post_refresh()
