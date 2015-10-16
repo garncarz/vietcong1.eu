@@ -1,4 +1,6 @@
 __pycache__/
+htmlcov/
+.coverage
 db.sqlite*
 
 *.mo

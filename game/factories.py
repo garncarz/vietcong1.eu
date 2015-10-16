@@ -21,6 +21,7 @@ lazy_randint = lambda min, max: lazy(lambda: random.randint(min, max))
 class Mode(DjangoModelFactory):
     class Meta:
         model = models.Mode
+        django_get_or_create = ['name']
 
     name = lazy(faker.word)
 
@@ -28,6 +29,7 @@ class Mode(DjangoModelFactory):
 class Map(DjangoModelFactory):
     class Meta:
         model = models.Map
+        django_get_or_create = ['name']
 
     name = lazy(lambda: faker.sentence(2))
 
@@ -40,11 +42,11 @@ class Map(DjangoModelFactory):
 class Server(DjangoModelFactory):
     class Meta:
         model = models.Server
+        django_get_or_create = ['ip', 'port']
 
     ip = lazy(faker.ipv4)
     infoport = lazy_randint(15425, 15430)
     port = lazy_randint(5425, 5430)
-
 
     name = lazy(lambda: faker.sentence(2))
     map = lazy_obj(models.Map)
