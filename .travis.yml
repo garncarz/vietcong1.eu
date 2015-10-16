@@ -5,6 +5,7 @@ python:
 install:
     - pip install -r requirements.txt
     - pip install coveralls
+    - echo 'from .development import *' > vietcong/settings/local.py
 script:
     coverage run ./manage.py test
 after_success:

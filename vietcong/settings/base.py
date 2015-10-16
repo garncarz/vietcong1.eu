@@ -13,14 +13,19 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(
+    os.path.dirname(
+        os.path.dirname(
+            os.path.abspath(__file__)
+        )
+    )
+)
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '-=szcc%$%co+3gs&4^1_ddbh6i8wbv3v=9655(fnq&2i_=@@ck'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -120,4 +125,3 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'front_end/static')]
 # Crawler settings
 
 UDP_TIMEOUT = 4
-GEOIP_DAT = '/usr/share/GeoIP/GeoIP.dat'
