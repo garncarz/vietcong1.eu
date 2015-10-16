@@ -1,6 +1,8 @@
 decorator==4.0.4
 Django==1.8.4
 django-markdown-deux==1.0.5
+factory-boy==2.5.2
+fake-factory==0.5.3
 ipython==4.0.0
 ipython-genutils==0.1.0
 markdown2==2.3.0
