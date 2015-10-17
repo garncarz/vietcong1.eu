@@ -1,3 +1,8 @@
+# Vietcong1.eu
+
+[![Build Status](https://travis-ci.org/garncarz/vietcong1.eu.svg?branch=master)](https://travis-ci.org/garncarz/vietcong1.eu)
+[![Coverage Status](https://coveralls.io/repos/garncarz/vietcong1.eu/badge.svg?branch=master&service=github)](https://coveralls.io/github/garncarz/vietcong1.eu?branch=master)
+
 ## Installation
 
 Needed: [Python 3](https://www.python.org/)
@@ -7,6 +12,7 @@ Needed: [Python 3](https://www.python.org/)
 3. Make sure `virtualenv/bin` is in `PATH`.
 4. `cd vietcong1.eu`
 5. `pip install -r requirements.txt`
+6. Create `vietcong/settings/local.py`, it should begin with `from .base import *`, settings override and specifications should follow. Or you can just `from .development import *` if you're developing.
 
 
 ### Installation of front-end
@@ -33,3 +39,15 @@ Needed:
 Run:
 
 `./manage.py runserver` when developing.
+
+
+## Demo
+
+`./manage.py demo` fills DB with randomly generated content.
+
+
+## Testing
+
+`./manage.py test`
+
+With coverage: `coverage run --source='.' ./manage.py test`, then `coverage report` or `coverage html`.
