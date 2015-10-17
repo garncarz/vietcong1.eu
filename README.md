@@ -3,6 +3,9 @@
 [![Build Status](https://travis-ci.org/garncarz/vietcong1.eu.svg?branch=master)](https://travis-ci.org/garncarz/vietcong1.eu)
 [![Coverage Status](https://coveralls.io/repos/garncarz/vietcong1.eu/badge.svg?branch=master&service=github)](https://coveralls.io/github/garncarz/vietcong1.eu?branch=master)
 
+This is a rewrite of http://vietcong1.eu into a Django-powered project. Originally, only [server fetching mechanism](https://github.com/garncarz/nogamespy-vietcong) was written in Python, the rest of back-end being PHP/Nette.
+
+
 ## Installation
 
 Needed: [Python 3](https://www.python.org/)
