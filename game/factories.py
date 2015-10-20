@@ -3,12 +3,10 @@ import random
 
 from factory import lazy_attribute, post_generation
 from factory.django import DjangoModelFactory
-from faker import Factory
-from faker.providers.address import Provider as AddressProvider
 
+from core.faker import faker
 from . import models
 
-faker = Factory.create()
 lazy = lambda call: lazy_attribute(lambda obj: call())
 lazy_bool = lazy(lambda: random.choice([True, False]))
 rand_obj = lambda model: model.objects.order_by('?').first()
@@ -55,10 +53,8 @@ class Server(DjangoModelFactory):
 
     @post_generation
     def country(self, create, extracted, **kwargs):
-        i = random.randint(0, len(AddressProvider.countries) - 1)
-        self.country = AddressProvider.country_codes[i]
-        self.country_name = AddressProvider.countries[i]
-        self.save()
+        country = faker.country()
+        self.country, self.country_name = country['code'], country['name']
 
     version = lazy_choice(['1.60', '1.01'])
     hradba = lazy_choice([None, '206'])
