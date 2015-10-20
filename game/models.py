@@ -1,12 +1,15 @@
 from datetime import timedelta
 import logging
+import os.path
 import re
 import socket
+from uuid import uuid4
 
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils import timezone
+from django.utils.text import slugify
 
 from core import geoip
 
@@ -17,13 +20,29 @@ logger = logging.getLogger(__name__)
 class Mode(models.Model):
     name = models.CharField(max_length=256, unique=True)
 
+    __str__ = lambda self: str(self.name)
+
 
 class Map(models.Model):
     name = models.CharField(max_length=256, unique=True)
     modes = models.ManyToManyField(Mode)
 
+    __str__ = lambda self: str(self.name)
+
     def get_absolute_url(self):
         return reverse('game:map_detail', kwargs={'pk': self.pk})
+
+
+class MapImage(models.Model):
+    def upload_to(instance, filename):
+        return '%s/%s%s' % (slugify(instance.map.name),
+                            uuid4(),
+                            os.path.splitext(filename)[1])
+
+    image = models.ImageField(upload_to=upload_to)
+    map = models.ForeignKey(Map, related_name='images')
+
+    __str__ = lambda self: str(self.image.url)
 
 
 class ServerQuerySet(models.QuerySet):
@@ -81,8 +100,8 @@ class Server(models.Model):
     online_since = models.DateTimeField(auto_now_add=True)
     offline_since = models.DateTimeField(null=True, blank=True)
 
-    def __str__(self):
-        return '%s:%s' % (self.ip, self.infoport)
+    __str__ = lambda self: '%s (%s:%s)' % (self.name, self.ip, self.port)
+    tcpip = property(lambda self: '%s:%s' % (self.ip, self.infoport))
 
     def get_absolute_url(self):
         return reverse('game:server_detail',
@@ -94,7 +113,7 @@ class Server(models.Model):
             self._merge_info(info)
             self._merge_players_info(info)
         except:
-            logger.exception('Error refreshing server %s' % str(self))
+            logger.exception('Error refreshing server %s' % self.tcpip)
             self.online = False
             self.save()
 
@@ -177,3 +196,5 @@ class Player(models.Model):
 
     online = models.BooleanField(default=True)
     online_since = models.DateTimeField(auto_now_add=True)
+
+    __str__ = lambda self: '%s@%s' % (self.name, self.server.name)

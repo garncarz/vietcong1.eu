@@ -1,5 +1,6 @@
 __pycache__/
 htmlcov/
+media/
 .coverage
 db.sqlite*
 

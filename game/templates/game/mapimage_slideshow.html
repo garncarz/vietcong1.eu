@@ -1,0 +1,9 @@
+<ul data-orbit data-options="slide_number_text:/;">
+    {% for img in images %}
+        <li>
+            <img src="{{ img.image.url }}">
+            <div class="orbit-caption">
+                {{ img.map.name }}
+            </div>
+    {% endfor %}
+</ul>

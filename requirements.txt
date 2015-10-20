@@ -10,6 +10,7 @@ markdown2==2.3.0
 path.py==8.1.1
 pexpect==3.3
 pickleshare==0.5
+Pillow==3.0.0
 pygeoip==0.3.2
 simplegeneric==0.8.1
 traitlets==4.0.0

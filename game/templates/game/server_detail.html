@@ -72,4 +72,7 @@
             <td>{{ player.online_since|timesince }}
     {% endfor %}
 </table>
+
+{% include 'game/mapimage_slideshow.html' with images=server.map.images.all %}
+
 {% endblock %}
