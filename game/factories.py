@@ -4,6 +4,7 @@ import random
 from factory import lazy_attribute, post_generation
 from factory.django import DjangoModelFactory
 from faker import Factory
+from faker.providers.address import Provider as AddressProvider
 
 from . import models
 
@@ -52,8 +53,12 @@ class Server(DjangoModelFactory):
     map = lazy_obj(models.Map)
     mode = lazy_subobj(lambda obj: obj.map.modes)
 
-    country = lazy(faker.country_code)
-    country_name = lazy(faker.country)  # TODO match with country_code
+    @post_generation
+    def country(self, create, extracted, **kwargs):
+        i = random.randint(0, len(AddressProvider.countries) - 1)
+        self.country = AddressProvider.country_codes[i]
+        self.country_name = AddressProvider.countries[i]
+        self.save()
 
     version = lazy_choice(['1.60', '1.01'])
     hradba = lazy_choice([None, '206'])
