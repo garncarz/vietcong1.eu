@@ -73,6 +73,6 @@
     {% endfor %}
 </table>
 
-{% include 'game/mapimage_slideshow.html' with images=server.map.images.all %}
+{% include 'game/mapimage_slideshow.html' with map=server.map %}
 
 {% endblock %}

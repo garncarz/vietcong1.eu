@@ -18,3 +18,7 @@ $(document).ready(function() {
 
     $.vietcong.updateEmails();
 });
+
+$(document).on('click', 'button.close', function() {
+    $(this).parent().fadeTo('slow', 0).hide('slow');
+});

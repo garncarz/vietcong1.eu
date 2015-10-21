@@ -27,7 +27,12 @@
     <section class="{% block mainSectionClass %}
                         large-10 large-centered columns
                     {% endblock%}" role="main">
-        {# TODO messages #}
+        {% for message in messages %}
+            <div class="flash {{ message.tags }}">
+                <button class="close">×</button>
+                {{ message }}
+            </div>
+        {% endfor %}
 
         {% block content %}{% endblock %}
     </section>

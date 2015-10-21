@@ -15,4 +15,7 @@ urlpatterns = [
     url(r'^map/(?P<pk>\d+)$',
         views.MapDetailView.as_view(),
         name='map_detail'),
+    url(r'^map/(?P<pk>\d+)/upload-img$',
+        views.MapImageUploadView.as_view(),
+        name='map_upload_img'),
 ]

@@ -1,9 +1,23 @@
-<ul data-orbit data-options="slide_number_text:/;">
-    {% for img in images %}
-        <li>
-            <img src="{{ img.image.url }}">
-            <div class="orbit-caption">
-                {{ img.map.name }}
-            </div>
-    {% endfor %}
-</ul>
+{% load i18n %}
+
+<a class="button expand" href="{% url 'game:map_upload_img' map.pk %}">
+    {% trans 'Upload a picture of the map' %}
+</a>
+
+<p>
+{% with images=map.images.all %}
+    {% if images %}
+        <ul data-orbit data-options="slide_number_text:/;">
+            {% for img in images %}
+                <li>
+                    <img src="{{ img.image.url }}">
+                    <div class="orbit-caption">
+                        {{ img.map.name }}
+                    </div>
+            {% endfor %}
+        </ul>
+    {% else %}
+        {% trans 'So far no picture. Be the first to upload!' %}
+    {% endif %}
+{% endwith %}
+</p>

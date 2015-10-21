@@ -1,5 +1,8 @@
+from django.contrib import messages
+from django.shortcuts import redirect
 from django.views import generic
 
+from . import forms
 from . import models
 
 
@@ -33,3 +36,23 @@ class PlayerListView(generic.ListView):
 
 class MapDetailView(generic.DetailView):
     model = models.Map
+
+
+class MapImageUploadView(generic.FormView):
+    template_name = 'game/mapimage_upload.html'
+    form_class = forms.MapImageForm
+
+    def get_map(self):
+        return models.Map.objects.get(pk=self.kwargs['pk'])
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['map'] = self.get_map()
+        return context
+
+    def form_valid(self, form):
+        map_image = form.save(commit=False)
+        map_image.map = self.get_map()
+        map_image.save()
+        messages.success(self.request, 'The picture has been uploaded.')
+        return redirect(map_image.map)

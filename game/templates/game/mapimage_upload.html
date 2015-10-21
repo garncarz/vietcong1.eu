@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% load i18n markdown_deux_tags %}
+
+{% block title %}{% trans 'Upload a picture for' %} {{ map.name }}{% endblock %}
+
+{% block content %}
+
+<div class="help">
+{% get_current_language as LANG_CODE %}
+{% if LANG_CODE == 'cs' %}
+{% markdown %}
+Pro pořízení snímku můžete zmáčknout během hry klávesu `F2`,
+obrázek poté naleznete v adresáři `C:\Program Files\Vietcong\screens`,
+či podobném.
+Nezapomeňte převést BMP soubor do formátu JPEG či PNG.
+(Lze využít i programu Malování.)
+___
+Nahráním obrázků stvrzujete, že jejich obsah není nikterak závadný
+a neodporuje zákonům ČR, ani případně Vaší země.
+{% endmarkdown %}
+{% else %}
+{% markdown %}
+For capturing the screen during a gameplay you can press the `F2` key,
+the picture should be located in the directory
+`C:\Program Files\Vietcong\screens`
+(or similar) then.
+Don't forget to convert the BMP file into a JPEG or PNG format.
+(You can use program Microsoft Paint for that.)
+___
+By uploading pictures you concur that they're not inappropriate,
+nor they break the law of your country or the Czech republic.
+{% endmarkdown %}
+{% endif %}
+</div>
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="{% trans 'Upload' %}" />
+</form>
+
+{% endblock %}
