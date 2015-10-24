@@ -82,6 +82,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'vietcong.wsgi.application'
 
+AUTH_USER_MODEL = 'vietcong.User'
+
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
