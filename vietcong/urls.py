@@ -14,5 +14,6 @@ urlpatterns = [
                name='home'),
 ] + i18n_patterns(
     url(r'^faq', views.FAQView.as_view(), name='faq'),
+    url(r'^', include('django.contrib.auth.urls')),
     url(r'^', include('game.urls', namespace='game')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

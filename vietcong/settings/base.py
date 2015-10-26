@@ -83,6 +83,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'vietcong.wsgi.application'
 
 AUTH_USER_MODEL = 'vietcong.User'
+LOGIN_REDIRECT_URL = '/'
 
 
 # Database

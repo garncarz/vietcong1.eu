@@ -24,4 +24,21 @@
             </li>
         {% endif %}
     {% endfor %}
+
+    {% if user.is_authenticated %}
+        <li class="has-dropdown">
+            <a href="#">{{ user.get_short_name }}</a>
+            <ul class="dropdown">
+                <li>
+                    <a href="{% url 'password_change' %}">
+                        {% trans 'Change Password' %}
+                    </a>
+                <li><a href="{% url 'logout' %}">{% trans 'Sign Out' %}</a>
+            </ul>
+    {% else %}
+        <li>
+            <a href="{% url 'login' %}">{% trans 'Not signed in' %}</a>
+        </li>
+    {% endif %}
+
 </ul>
