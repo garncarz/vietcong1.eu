@@ -10,12 +10,23 @@ SERVERS = 20
 class Command(BaseCommand):
     help = 'Populates DB with a demo (random) content.'
 
+    def print(self, msg):
+        if getattr(self, 'verbose', None):
+            self.stdout.write(msg)
+
     def handle(self, *args, **options):
-        self.stdout.write('Creating %d modes...' % MODES)
+        self.verbose = 0 if 'verbosity' not in options \
+                       else options['verbosity']
+
+        self.print('Creating %d modes...' % MODES)
         [factories.Mode() for _ in range(MODES)]
 
-        self.stdout.write('Creating %d maps...' % MAPS)
+        self.print('Creating %d maps...' % MAPS)
         [factories.Map() for _ in range(MAPS)]
 
-        self.stdout.write('Creating %d servers...' % SERVERS)
+        self.print('Creating %d servers...' % SERVERS)
         [factories.Server() for _ in range(SERVERS)]
+
+
+def populate():
+    Command().execute(options={'verbosity': 0})
