@@ -36,6 +36,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'core',
+    'game',
+    'vietcong',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,10 +48,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'markdown_deux',
-
-    'core',
-    'game',
-    'vietcong',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -116,6 +116,12 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+# Mailing
+
+SERVER_EMAIL = 'Vietcong1.eu <admin@vietcong1.eu>'
+DEFAULT_FROM_EMAIL = SERVER_EMAIL
 
 
 # Static files (CSS, JavaScript, Images)
