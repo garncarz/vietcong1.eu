@@ -97,7 +97,7 @@ class Server(models.Model):
     vietnam = models.BooleanField(default=False)
 
     online = models.BooleanField(default=True)
-    online_since = models.DateTimeField(auto_now_add=True)
+    online_since = models.DateTimeField(default=timezone.now)
     offline_since = models.DateTimeField(null=True, blank=True)
 
     __str__ = lambda self: '%s (%s:%s)' % (self.name, self.ip, self.port)
@@ -195,6 +195,6 @@ class Player(models.Model):
     server = models.ForeignKey(Server, related_name='players')
 
     online = models.BooleanField(default=True)
-    online_since = models.DateTimeField(auto_now_add=True)
+    online_since = models.DateTimeField(default=timezone.now)
 
     __str__ = lambda self: '%s@%s' % (self.name, self.server.name)

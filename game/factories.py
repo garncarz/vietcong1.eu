@@ -1,6 +1,7 @@
-from datetime import datetime, timedelta
+from datetime import timedelta
 import random
 
+from django.utils import timezone
 from factory import lazy_attribute, post_generation
 from factory.django import DjangoModelFactory
 
@@ -74,7 +75,7 @@ class Server(DjangoModelFactory):
 
     online = True
     online_since = lazy(
-        lambda: datetime.now() - timedelta(days=random.randint(0,2),
+        lambda: timezone.now() - timedelta(days=random.randint(0,2),
                                            hours=random.randint(0, 24))
         )
 
@@ -91,6 +92,6 @@ class Player(DjangoModelFactory):
 
     online = True
     online_since = lazy(
-        lambda: datetime.now() - timedelta(hours=random.randint(0, 7),
+        lambda: timezone.now() - timedelta(hours=random.randint(0, 7),
                                            minutes=random.randint(0, 60))
         )
