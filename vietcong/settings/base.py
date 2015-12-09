@@ -26,9 +26,11 @@ BASE_DIR = os.path.dirname(
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+if 'SECRET_KEY' in os.environ:
+    SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -48,6 +50,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'markdown_deux',
+    'storages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -127,13 +130,16 @@ DEFAULT_FROM_EMAIL = SERVER_EMAIL
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = '/static/'
+STATICFILES_LOCATION = 'static'
+STATIC_URL = '/%s/' % STATICFILES_LOCATION
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'front_end/static')]
 
-MEDIA_URL = '/media/'
+MEDIAFILES_LOCATION = 'media'
+MEDIA_URL = '/%s/' % MEDIAFILES_LOCATION
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Crawler settings
 
 UDP_TIMEOUT = 4
+GEOIP_DAT = '/usr/share/GeoIP/GeoIP.dat'
