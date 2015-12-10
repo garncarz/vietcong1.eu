@@ -5,8 +5,8 @@ python:
 install:
     - pip install -r requirements.txt
     - pip install coveralls
-    - echo 'from .development import *' > vietcong/settings/local.py
+    - echo 'GEOIP_DAT = None' > vietcong/settings/local.py
 script:
-    coverage run --source='.' ./manage.py test
+    DEBUG=1 coverage run --source='.' ./manage.py test
 after_success:
     coveralls
