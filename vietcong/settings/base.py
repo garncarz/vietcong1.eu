@@ -50,6 +50,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'markdown_deux',
+    'rest_framework',
     'storages',
 )
 
@@ -137,6 +138,15 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'front_end/static')]
 MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = '/%s/' % MEDIAFILES_LOCATION
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# Rest
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    ]
+}
 
 
 # Crawler settings

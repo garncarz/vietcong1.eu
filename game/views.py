@@ -1,9 +1,11 @@
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.views import generic
+from rest_framework import viewsets
 
 from . import forms
 from . import models
+from . import serializers
 
 
 class ServerListView(generic.ListView):
@@ -14,6 +16,11 @@ class ServerListView(generic.ListView):
             .select_related('map', 'mode')
             .filter(online=True)
             .all())
+
+
+class ServerViewSet(viewsets.ModelViewSet):
+    queryset = models.Server.objects.all().order_by('name')
+    serializer_class = serializers.ServerSerializer
 
 
 class ServerDetailView(generic.DetailView):

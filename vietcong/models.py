@@ -49,5 +49,8 @@ class User(AbstractBaseUser):
     def has_perm(self, perm, obj=None):
         return self.is_admin
 
+    def has_perms(self, perm_list, obj=None):
+        return all([self.has_perm(perm, obj) for perm in perm_list])
+
     def has_module_perms(self, app_label):
         return self.is_admin
