@@ -54,3 +54,6 @@ Run:
 `./manage.py test`
 
 With coverage: `coverage run --source='.' ./manage.py test`, then `coverage report` or `coverage html`.
+
+
+<!-- ❄️ Hello to the GitHub Archive! ❄️ -->
